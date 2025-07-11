@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route, Routes  } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Additems from './components/Additems'
+import Additems from './components/AddItems'
 import List from './components/List'
 import Orders from './components/Order'
+import Navbar from './components/Navbar'
 
 
 const App = () => {
