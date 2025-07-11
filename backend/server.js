@@ -24,7 +24,7 @@ const __dirname = path.dirname(__filename);
 // MIDDLEWARE
 app.use(cors({
     origin: (origin, callback) => {
-        const allowedOrigins = ['http://localhost:5173', 'http://localhost:5174'];
+        const allowedOrigins = ['https://foodie-pee-frontend.onrender.com', 'https://foodie-pee-admin.onrender.com'];
         if(!origin || allowedOrigins.includes(origin)){
             callback(null, true);
         }
