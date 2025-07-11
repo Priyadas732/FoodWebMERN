@@ -1,10 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { navLinks, styles } from '../assets/dummyadmin'
 import { GiChefToque } from "react-icons/gi";
 import { FiMenu, FiX } from "react-icons/fi";
 import { NavLink } from 'react-router-dom';
 const navbar = () => {
-  const [menuOpen, setMenuOpen] = React.useState(false);         
+  const [menuOpen, setMenuOpen] = useState(false);         
   return (
      <nav className={styles.navWrapper}>
           <div className={styles.navContainer}>
