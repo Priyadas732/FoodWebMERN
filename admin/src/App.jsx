@@ -3,7 +3,7 @@ import { Route, Routes  } from 'react-router-dom'
 import Additems from './components/Additems'
 import List from './components/List'
 import Orders from './components/Order'
-import Navbar from './components/Navbar'
+import Navbar from './components/navbar'
 
 
 const App = () => {
