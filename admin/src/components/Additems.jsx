@@ -51,7 +51,7 @@ const Additems = () => {
         payload.append(key, val);
       });
       const res = await axios.post(
-        'http://localhost:4000/api/items',
+        'https://foodie-pee-backend.onrender.com/api/items',
         payload,
         { headers: { 'Content-Type': 'multipart/form-data' } }
       );

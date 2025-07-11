@@ -27,7 +27,7 @@ const VerifyPaymentPage = () => {
            return;
         }
         // STRIPE SUCCESS = TRUE
-        axios.get('http://localhost:4000/api/orders/confirm', { 
+        axios.get('https://foodie-pee-backend.onrender.com/api/orders/confirm', { 
           params: { session_id }, 
           headers: authHeaders 
         })

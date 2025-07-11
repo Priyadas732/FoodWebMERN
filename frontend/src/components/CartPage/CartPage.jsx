@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../../CartContext/CartContext';
 import { FaMinus, FaPlus, FaTrash,FaTimes  } from 'react-icons/fa';
 
-const API_URL = 'http://localhost:4000';
+const API_URL = 'https://foodie-pee-backend.onrender.com';
 const CartPage = () => {
   const {cartItems,removeFromCart, updateQuantity,totalAmount} = useCart();
   const [selectedImage, setSelectedImage] = useState(null);

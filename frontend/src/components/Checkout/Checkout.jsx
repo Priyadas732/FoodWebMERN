@@ -29,7 +29,7 @@ const Checkout = () => {
       const sessionId = params.get('session_id');
       
       if(paymentStatus === 'paid' && sessionId){
-          axios.post('http://localhost:4000/api/orders/confirm', { sessionId },
+          axios.post('https://foodie-pee-backend.onrender.com/api/orders/confirm', { sessionId },
              { headers: authHeaders })
              .then(({ data}) => {
               clearCart();
@@ -76,13 +76,13 @@ const Checkout = () => {
     console.log("Submitting Payload:", payload); // DEBUG chatgpt this line
     try{
       if(formData.paymentMethod === 'cod'){
-             const {data} = await axios.post('http://localhost:4000/api/orders', payload, { headers: authHeaders });
+             const {data} = await axios.post('https://foodie-pee-backend.onrender.com/api/orders', payload, { headers: authHeaders });
              clearCart();
              navigate('/myorder', { state: { order: data.order } });
       }
       else {
              //online
-             const {data} = await axios.post('http://localhost:4000/api/orders', payload, { headers: authHeaders });
+             const {data} = await axios.post('https://foodie-pee-backend.onrender.com/api/orders', payload, { headers: authHeaders });
              window.location.href = data.checkoutUrl;
              
       }

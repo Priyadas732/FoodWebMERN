@@ -53,7 +53,7 @@ export const CartProvider = ({ children }) => {
   // HYDRATE FROM SERVER API
   useEffect(() => {
     const token = localStorage.getItem('authToken');
-    axios.get('http://localhost:4000/api/cart', {
+    axios.get('https://foodie-pee-backend.onrender.com/api/cart', {
       withCredentials: true,
       headers: { Authorization: `Bearer ${token}` },
     })
@@ -82,7 +82,7 @@ export const CartProvider = ({ children }) => {
   // DISPATCHER WRAPPED WITH useCALLBACK FOR PERFORMANCE
   const addToCart = useCallback((item, qty) => {
     const token = localStorage.getItem('authToken');
-    const res =  axios.post('http://localhost:4000/api/cart',
+    const res =  axios.post('https://foodie-pee-backend.onrender.com/api/cart',
        { itemId: item._id, quantity: qty }, 
       {
         withCredentials: true,
@@ -96,7 +96,7 @@ export const CartProvider = ({ children }) => {
     if (!_id) return console.error("Cannot remove item: ID is undefined");
     const token = localStorage.getItem('authToken');
     await axios.delete(
-      `http://localhost:4000/api/cart/${_id}`, 
+      `https://foodie-pee-backend.onrender.com/api/cart/${_id}`, 
       {
           withCredentials: true,
           headers: { Authorization: `Bearer ${token}` },
@@ -108,7 +108,7 @@ export const CartProvider = ({ children }) => {
   const updateQuantity = useCallback(async (_id, qty) => {
     const token = localStorage.getItem('authToken');
     const res = await axios.put(
-      `http://localhost:4000/api/cart/${_id}`, 
+      `https://foodie-pee-backend.onrender.com/api/cart/${_id}`, 
       { quantity: qty },
       {
           withCredentials: true,
@@ -120,7 +120,7 @@ export const CartProvider = ({ children }) => {
 
   const clearCart = useCallback(async () => {
     const token = localStorage.getItem('authToken');
-    await axios.put('http://localhost:4000/api/cart/clear',
+    await axios.put('https://foodie-pee-backend.onrender.com/api/cart/clear',
     {}, 
     {
       withCredentials: true,
