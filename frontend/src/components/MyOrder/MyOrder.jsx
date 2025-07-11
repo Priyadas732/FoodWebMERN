@@ -2,7 +2,6 @@ import axios from 'axios';
 import React, {useEffect, useState} from 'react'
 import { FiArrowLeft, FiClock,FiTruck, FiCheckCircle, FiUser, FiMapPin, FiBox } from 'react-icons/fi'
 import {Link} from 'react-router-dom'
-import './MyOrder.css'
 import { useNavigate } from 'react-router-dom';
 const MyOrder = () => {
 
