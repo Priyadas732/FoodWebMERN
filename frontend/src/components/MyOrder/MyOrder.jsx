@@ -4,8 +4,7 @@ import { FiArrowLeft, FiClock,FiTruck, FiCheckCircle, FiUser, FiMapPin, FiBox } 
 import {Link} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 const MyOrder = () => {
-
-  const navigate = useNavigate();  //chatgpt         
+    
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);  
   const [error, setError] = useState(null);
@@ -14,10 +13,10 @@ const MyOrder = () => {
   //FETCH ORDERS FOR A USER
   useEffect(() => {
 
-    if (!user || !token) {
-      navigate('/login');
-      return;
-    }         
+    // if (!user || !token) {
+    //   navigate('/login');
+    //   return;
+    // }         
     const fetchOrders = async () => {
       try {
         const response = await axios.get('http://localhost:4000/api/orders', {
